@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>eBroker Documentation</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- Google Font -->
+    <!--<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet"> -->
+    <!-- FontAwesome JS-->
+    <!--<script defer src="assets/fontawesome/js/all.min.js"></script>-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+</head>
+
+<body class="docs-page">
+    <header class="header fixed-top">
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+                    <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
+                        type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="site-logo">
+                        <a class="navbar-brand" href="index.html">
+                            <img class="logo-icon me-2" src="images/logo.svg" alt="logo" data-noapply="true">
+                        </a>
+                    </div>
+                </div>
+                <!--//docs-logo-wrapper-->
+            </div>
+        </div>
+    </header>
+    <div class="docs-wrapper">
+        <!--sidebar-->
+        <div id="docs-sidebar" class="docs-sidebar">
+            <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+                    <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+                    <button type="submit" class="btn search-btn" value="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <nav id="docs-nav" class="docs-nav navbar">
+                <ul class="section-items list-unstyled nav flex-column pb-3">
+                    <li class="nav-item section-title">
+                        <a class="nav-link scrollto " href="#section-1">
+                            <span class="theme-icon-holder me-2">
+                                <i class="fas fa-map-signs"></i>
+                            </span>
+                            Introduction
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setup">How to setup Flutter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#upgradeflutter">How to Updrade Flutter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#runflutter">How to Run App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setupios">Setup Project on MacOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#apk">Generate Release APK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#iosbuild">How to Publish iOS App to App Store</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-3">
+                            <span class="theme-icon-holder me-2">
+                                <i class="fas fa-server"></i>
+                            </span>
+                            Firebase
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#create_fcm">Create Firebase Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#enableotp">How to enable Firebase Phone
+                            Authentication(OTP).</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#enablenotification">How to set Notification</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-4">
+                            <span class="theme-icon-holder me-2">
+                                <i class="fas fa-server"></i>
+                            </span>
+                            App Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changeappname">Change App name</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changePackageName">Change App package</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changeAppLogo">Change App logo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changeAppVersion">Change App version</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changefonts">Change Fonts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changecolor">Change Theme Colour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changesvg">Change App Icons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#changeLang">Add or change app's language</a>
+                    </li>
+
+
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-5">
+                            <span class="theme-icon-holder me-2">
+                                <i class="fas fa-server"></i>
+                            </span>
+                            API Setting
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setuphosturl">Setup Host URL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setapiloadlimit">Change API data load limit</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setupmapkey">How to setup Google Map key</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setupplace">How to setup Place API key</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#paymentapikeys">How to setup Payment API keys</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-5">
+                            <span class="theme-icon-holder me-2">
+                                <i class="fas fa-server"></i>
+                            </span>
+                            How to Setup Admin Penel
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setuppanel">How To Install Admin Panel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#setupfirebase">Firebase Settings</a>
+                    </li>
+                    <li class="nav-item section-title mt-3">
+                        <a class="nav-link scrollto" href="#section-7">
+                            <span class="theme-icon-holder me-2">
+                                <i class="fas fa-question-circle"></i>
+                            </span>
+                            WRTeam
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#support">Need Support?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#rating">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scrollto" href="#contactus">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--//docs-nav-->
+        </div>
+        <!--//docs-sidebar-->
+        <div class="docs-content">
+            <div class="container">
+                <article class="docs-article" id="section-1">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">
+                            <img src="images/wrteam.png" alt="SmartKitPro" data-noapply="true">
+                            <span class="docs-time">
+                                <a href="https://wrteam.in/" target="_blank">wrteam.in</a>
+                            </span>
+                        </h1>
+                        <section class="docs-intro">
+                            <p>
+                                WRTeam is a company built with the ideology of customers first. We are a team of
+                                enthusiastic individuals, with foresight for innovation and a passion for solving
+                                everyday problems using the latest
+                                technology.
+                            </p>
+                        </section>
+                        <section class="docs-intro">
+                            <p>
+                                We trust in your ideas and want to help you bring them to life, so you can focus on your
+                                long term vision while we do all the hard work. As a service providing company, we
+                                understand your needs and strive
+                                hard to provide you with the best possible quality of service whether it is the
+                                development of your app, logo design or branding, or UI/UX improvements.
+                            </p>
+                        </section>
+                        <section class="docs-intro">
+                            <p>
+                                To achieve the above, we have handpicked our people and recruited a team of
+                                multi-talented individuals, each of whom adds a unique skill to our team of service
+                                providers. We ensure quality by imparting
+                                strict testing of all our products, listening to the customer complaints, and solving
+                                their problems on a priority basis.
+                            </p>
+                        </section>
+                    </header>
+                    <section class="docs-section" id="setup">
+                        <h2 class="section-heading">How to Setup Flutter in Android Studio</h2>
+                        <ol>
+                            <li>Download Lastest Flutter SDK from below link.in that click on flutter_window_xxx.zip
+                                button.</li>
+                            <li>
+                                <a href="https://flutter.dev/docs/get-started/install/windows">Flutter sdk Here</a>
+                            </li>
+                            <br>
+                            <a href="images/setup.png" data-fslightbox="gallery">
+                                <a href="images/setup.png" data-fslightbox="gallery">
+                                    <img class="figure-img img-fluid shadow rounded" src="images/setup.png"
+                                        alt="SmartKitPro">
+                                </a>
+                            </a>
+                            <br>
+                            <br>
+                            <li>Extract the zip file and copy flutter folder into your desired installation location for
+                                the Flutter SDK (eg. C:\src\flutter; do not install Flutter in a directory like
+                                C:\Program Files\).</li>
+                            <br>
+                            <li>Inside Flutter folder find flutter_console.bat. Start it by double-clicking.</li>
+                            <br>
+                            <br>
+                            <a href="images/setup2.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/setup2.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <li>Now set your enviournment variable</li>
+                            <li>From the Start search bar in , type &apos;env&apos; and select Edit environment
+                                variables for your account</li>
+                            <br>
+                            <a href="images/path.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/path.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <br>
+                            <li>Under User variables check if there is an entry called Path:</li>
+                            <li>Click on Edit.new Dialog open from it click on new and copy full path to flutter\bin as
+                                its value</li>
+                            <li>Now Restart your pc for changes to take effect</li>
+                            <a href="images/path2.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/path2.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <br>
+                            <li>Now check everything is ok or not</li>
+                            <li>open cmd and do following shown in below picture</li>
+                            <br>
+                            <a href="images/check.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/check.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <br>
+                            <li>Now open Android Studio and create new flutter project then select your flutter sdk file
+                                to the location where we have downloaded earlier and that's it</li>
+                            <br>
+                            <a href="images/flutter.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/flutter.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <br>
+                        </ol>
+                    </section>
+                    <!--//section-->
+                    <section class="docs-section" id="upgradeflutter">
+                        <h2 class="section-heading">How to upgrade flutter version?</h2>
+                        <ol>
+                            <li>for upgrade go to terminal in android studio and type flutter upgrade it will
+                                automatically pick latest version with stable channel</li>
+                            <a data-fslightbox="gallery" href="./images/flutterupgrade.png">
+                                <img src="./images/flutterupgrade.png">
+                            </a>
+                        </ol>
+                    </section>
+                    <section class="docs-section" id="runflutter">
+                        <h2 class="section-heading">How to Run App with command?</h2>
+                        <ol>
+                            <li>first, open your project</li>
+                            <li>
+                                Enter this command in editor's terminal
+                                <code>flutter run</code>
+                                .You can choose in which device you want to run app by
+                                <code>flutter run -d "DEVICE NAME OR ID"</code>
+                            </li>
+                            <li>
+                                You will get device name and id by running this commnad
+                                <code>flutter devices</code>
+                            </li>
+                            <a data-fslightbox="gallery" href="./images/runflutter.png">
+                                <img src="./images/runflutter.png" class="figure-img img-fluid shadow rounded">
+                            </a>
+                            <br>
+                            <br>
+                            And run on specific device,
+                            <br>
+                            <div>
+                                <a data-fslightbox="gallery" href="./images/runflutter1.png">
+                                    <img src="./images/runflutter1.png" class="figure-img img-fluid shadow rounded">
+                                </a>
+                            </div>
+                        </ol>
+                    </section>
+                    <section class="docs-section" id="setupios">
+                        <h2 class="section-heading">Setup Project on MacOS</h2>
+                        <ol>
+                            <li>Open Project folder in Android Studio. Go to Preferences > Language & Frameworks >
+                                Flutter and Set Flutter SDK Path & Enable Dart support for Project and Apply and OK.
+                            </li>
+                            <br>
+                            <a href="images/open-preferences-android studio.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded"
+                                    src="images/open-preferences-android studio.png" alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <br>
+                            <a href="images/flutter-path-set.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/flutter-path-set.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <a href="images/dart-enable-pathSet.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/dart-enable-pathSet.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <br>
+                            <li>Next: Go to Flutter > Clean Flutter > Flutter Pub Get.</li>
+                            <br>
+                            <li>Go to Terminal > write command -> cd iOS and press enter key and then write command pod
+                                install. After finishing pods installation.</li>
+                            <br>
+                            <li>Go to Flutter > Open iOS module in Xcode</li>
+                            <br>
+                            <a href="images/flutter-clean-pub get-Open in Xcode.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded"
+                                    src="images/flutter-clean-pub get-Open in Xcode.png" alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <li>Select Project > Target > Check For Display Name and Bundle Identifier in General Tab.
+                            </li>
+                            <a href="images/xcode-name&BundleID.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/xcode-name&BundleID.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <li>Now go to Signing & Capabilities >Signing > Team - Add Your Team / Apple Developer
+                                Account here.</li>
+                            <a href="images/xcode-capabilities.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/xcode-capabilities.png"
+                                    alt="SmartKitPro">
+                            </a>
+                            <br>
+                            <li>
+                                Add Following Capabilities according to Requirement of your Project & Respected Packages
+                                From Pubspec.yaml file.
+                                <br>
+                            </li>
+                            <ul>
+                                <li>Sign in with Apple</li>
+                                <br>
+                                <li>Apple Pay > Add Your merchant ID incase you want to use Apple Pay.</li>
+                                <br>
+                                <li>Associated Domains > add applinks of your Domain.</li>
+                                <br>
+                                <li>Background Modes > Location updates</li>
+                                <br>
+                            </ul>
+                        </ol>
+                    </section>
+                    <section class="docs-section" id="apk">
+                        <h2 class="section-heading">Generate Release APK</h2>
+                        <ol>
+
+                            <li>
+                                Create an upload keystore<br>
+                                Running the following at the command line:<br>
+                                <ul>
+                                    <li>
+                                        On Mac/Linux, use the following command: <br><br>
+                                        keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize
+                                        2048 -validity 10000 -alias upload
+                                        <br><br>
+                                    </li>
+                                    <li>
+                                        On Windows, use the following command:<br><br>
+                                        keytool -genkey -v -keystore c:\Users\USER_NAME\upload-keystore.jks
+                                        -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+                                        <br><br>
+                                    </li>
+
+                                </ul>
+                                <img class="figure-img img-fluid shadow rounded" src="images/modifyPath.webp"
+                                    alt="eDemand" /><br><br>
+                                <img class="figure-img img-fluid shadow rounded" src="images/remeberPassword.webp"
+                                    alt="eDemand" /><br><br>
+                                <img class="figure-img img-fluid shadow rounded" src="images/success.webp"
+                                    alt="eDemand" /><br><br>
+
+                            </li>
+
+                            <li>
+                                Reference the keystore from the app<br><br>
+                                Create a file named [project]/android/key.properties that contains a reference
+                                to your keystore:<br>
+                                <br>
+
+
+
+                                <img class="figure-img img-fluid shadow rounded" src="images/createfile.webp"
+                                    alt="eDemand" /><br><br>
+
+                                Copy below code, Paste in to key.propertirs file and change as per shown in
+                                image.<br><br>
+
+                                storePassword=<password from previous step> <br>
+                                    keyPassword=<password from previous step> <br>
+                                        keyAlias=upload <br>
+                                        storeFile=location of the key store file, such as /Users/user
+                                        name/upload-keystore.jks<br><br>
+                                        <img class="figure-img img-fluid shadow rounded" src="images/setPath.webp"
+                                            alt="eDemand" /><br><br>
+
+
+                            </li>
+
+                            <li>
+                                Configure signing in gradle <br><br>
+                                Configure gradle to use your upload key when building your app in release mode
+                                by editing the [project]/android/app/build.gradle file.<br>
+
+                                <ul>
+                                    <li>
+                                        Add the below keystore information from your properties file before the
+                                        android block: <br><br>
+                                        <br>
+                                        def keystoreProperties = new Properties()<br>
+                                        def keystorePropertiesFile = rootProject.file('key.properties')<br>
+                                        if (keystorePropertiesFile.exists()) {<br>
+                                        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))<br>
+                                        }<br><br>
+
+
+                                        <img class="figure-img img-fluid shadow rounded" src="images/codeBlock1.webp"
+                                            alt="eDemand" /><br><br>
+                                    </li>
+                                    <li>
+                                        Find the buildTypes block:<br>
+                                        And replace it with the following signing configuration info:
+                                        <br><br>
+                                        signingConfigs { <br>
+                                        release {<br>
+                                        keyAlias keystoreProperties['keyAlias']<br>
+                                        keyPassword keystoreProperties['keyPassword']<br>
+                                        storeFile keystoreProperties['storeFile'] ?
+                                        file(keystoreProperties['storeFile']) : null<br>
+                                        storePassword keystoreProperties['storePassword']<br>
+                                        }<br>
+                                        }<br>
+                                        buildTypes {<br>
+                                        release {<br>
+                                        signingConfig signingConfigs.release<br>
+                                        }<br>
+                                        }<br> <br>
+
+                                        <img class="figure-img img-fluid shadow rounded" src="images/codeBlock2.webp"
+                                            alt="eDemand" /><br><br>
+
+                                    </li>
+                                </ul>
+                                <br>
+                            </li>
+                            <li>
+                                Run following commands in Terminal as per your need: <br>
+                                <ul>
+                                    <li>
+
+                                        To generate an APK <br>
+                                        flutter build apk
+                                    </li>
+                                    <li>
+
+                                        To generate an App Bundle <br>
+                                        flutter build appbundle
+                                    </li>
+                                    <br>
+                                    <img class="figure-img img-fluid shadow rounded" src="images/generateAPK.webp"
+                                        alt="eDemand" /><br><br>
+                                </ul>
+                            </li>
+
+                        </ol>
+                        </ol>
+
+                    </section>
+                    <!--//section-->
+                    <section class="docs-section" id="iosbuild">
+                        <h2 class="section-heading">Steps to Publish iOS App to App Store</h2>
+                        <ol>
+                            <li>
+                                Open your Project's Runner.xcworkspace file in Xcode, and Add your Team [Your Apple
+                                Developer ID] and also Insert GoogleService-Info.plist file [Downloaded From Firebase
+                                Project] inside folder named
+                                Runner.
+                            </li>
+                            <br>
+                            <a href="images/ios1.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/ios1.png" alt="eBroker">
+                            </a>
+                            <br>
+                            <br>
+                            <li>
+                                and then Select
+                                <b>Any iOS Device (armv7,arm64)</b>
+                                as shown in image below.
+                            </li>
+                            <br>
+                            <a href="images/ios3.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/ios3.png" alt="eBroker"
+                                    class="figure-img img-fluid shadow rounded">
+                            </a>
+                            <br>
+                            <br>
+                            <li>
+                                After that Select
+                                <b>Archive</b>
+                                From Product Menu of Xcode as shown below.
+                            </li>
+                            <br>
+                            <a href="images/ios4.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/ios4.png" alt="eBroker"
+                                    class="figure-img img-fluid shadow rounded">
+                            </a>
+                            <br>
+                            <br>
+                            <li>Once Build / Archive Generated, pop up window will be shown. Validate app First, and
+                                After Successfull Validation of App, You Can Distribute App to AppStore.</li>
+                            <a href="images/ios5.png" data-fslightbox="gallery">
+                                <img class="figure-img img-fluid shadow rounded" src="images/ios5.png" alt="eBroker"
+                                    class="figure-img img-fluid shadow rounded">
+                            </a>
+                            <br>
+                            <br>
+                            <li>After SuccessFull Submission of Build File, it will be Reflected to your Apple Developer
+                                Account in which we have created app with same Bundle ID.</li>
+                            <a href="https://codewithchris.com/submit-your-app-to-the-app-store/"
+                                style="color: red;">Click here for Detailed Help</a>
+                        </ol>
+                        <p></p>
+                        <div class="section_bdr"></div>
+                    </section>
+                </article>
+                <article class="docs-article" id="section-3">
+                    <header class="docs-header">
+                        <h1 class="docs-heading">Firebase</h1>
+                        <section class="docs-intro">
+                            <p></p>
+                        </section>
+                        <!--//docs-intro-->
+                    </header>
+                    <section class="docs-section" id="create_fcm">
+                        <h2 class="section-heading">Create Firebase Project for Application.</h2>
+                        <li>
+                            We will use
+                            <strong>Fireabse</strong>
+                            for Authentication,Notifications,
+                        </li>
+                        <ul>
+                            <li>
+                                For create firebase app from flutter you must need to install firebase cli first.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                To install firebase cli follow this https://firebase.google.com/docs/cli
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                After firebase cli install you can follow below steps
+                            </li>
+                        </ul>
+                        <br>
+                        <li>Create firebase app step 1</li>
+                        <img src="images/firebase/fcm1.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Enter your project name here, and press continue,</li>
+                        <br>
+                        <img src="images/firebase/fcm2.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Press continue</li>
+                        <br>
+                        <img src="images/firebase/fcm3.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Press create project</li>
+                        <br>
+                        <img src="images/firebase/fcm4.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Press continue</li>
+                        <br>
+                        <img src="images/firebase/fcm5.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Create flutter app (Follow below image)</li>
+                        <br>
+                        <img src="images/firebase/fcm6.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Press next</li>
+                        <br>
+                        <img src="images/firebase/fcm7.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <li>
+                            Now to to android studio terminall and run "firebase login" command in terminal,
+                            and login to firebase from browser.
+                            <ul>
+                                <li>
+                                    Allow Firebase to collect CLI and Emulator Suite usage and error
+                                    reporting
+                                    information? set "YES" and press enter
+                                </li>
+                            </ul>
+                            </ul>
+                        </li>
+                        <img src="images/firebase/fcm8.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <br>
+                        <li>
+                            Now you need to run command accoring to below image in android studio terminal
+                        </li>
+                        <img src="images/firebase/fcm9.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>
+                            Now you need to run 2nd command accoring to below image in android studio
+                            terminal as well
+                        </li>
+                        <br>
+                        <img src="images/firebase/fcm10.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Once show this kind of output press "Enter" in terminal</li>
+                        <br>
+                        <img src="images/firebase/fcm11.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Once again show this kind of output press "y" in terminal</li>
+                        <br>
+                        <img src="images/firebase/fcm12.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Press continue</li>
+                        <br>
+                        <img src="images/firebase/fcm13.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Press continue to console</li>
+                        <br>
+                        <img src="images/firebase/fcm14.webp" alt="eBroker" class="figure-img img-fluid shadow rounded">
+                        <br>
+                        <br>
+                        <li>Your firebase setup is done.</li>
+                        <br>
+                        </ol>
+                        <section class="docs-section" id="enableotp">
+                            <h2>How to enable Firebase Phone Authentication(OTP).</h2>
+                            <ol>
+                                <li>Open your firebase console.</li>
+                                <li>Go to Authentication and open Sign-in method.</li>
+                                <li>Enable Phone Sign-in method and save.</li>
+                                <a href="images/phoneauth1.webp" data-fslightbox="gallery">
+                                    <img src="images/phoneauth1.webp" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <li>Now, we have to add sha1 and sha256 key in firebase, for that perform below given
+                                    step</li>
+                                <ul>
+                                    <li>
+                                        Go to the android folder. Right click gradlew file and select Open in Terminal
+                                        as shown in below image.
+                                    </li>
+                                    <a href="images/phoneauth2.webp" data-fslightbox="gallery">
+                                        <img src="images/phoneauth2.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    <li>
+                                        Go to the terminal view and paste- gradlew signingReport as shown in below
+                                    </li>
+                                    <li>
+                                        for mac it should be ./gradlew signingReport
+                                    </li>
+                                    <a href="images/phoneauth3.webp" data-fslightbox="gallery">
+                                        <img src="images/phoneauth3.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                </ul>
+                                <br>
+                                <li>now take debug sha and sha256 will print copy that and add it in firebase
+                                    console.and also add sha-256 to firebase console.</li>
+                                <br>
+                                <a href="images/phoneauth4.webp" data-fslightbox="gallery">
+                                    <img src="images/phoneauth4.webp" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <br>
+                                <br>
+                                <li>
+                                    now enable SafetyNet for use with Firebase Authentication.In the Google Cloud
+                                    Console, enable the Android DeviceCheck API for your project.first make sure your
+                                    correct project is selected then press enable button.
+                                </li>
+                                <br>
+                                <a href="images/phoneauth5.webp" data-fslightbox="gallery">
+                                    <img src="images/phoneauth5.webp" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                            </ol>
+                            <h2 class="teritory-color">Remember:</h2>
+                            <ol>
+                                <li>When we are releasing apk then we need to add release sha in firebase panel
+                                    otherwise otp will not work.</li>
+                                <li>after release you can get sha from play console here</li>
+                                <a href="images/phoneauth6.webp" data-fslightbox="gallery">
+                                    <img src="images/phoneauth6.webp" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <li>or another way you can also get release sha from below given command in cmd</li>
+                                <li>go to run and type cmd</li>
+                                <li>here first go to java jdk bin path</li>
+                                <li>then here edit this command and replace your keystore path and alias in this command
+                                    <code>
+                                    <span class="teritory-color">keytool -list -v -keystore "D:\keystore\eBroker.jks" -alias eBroker</span>
+                                </code>
+                                </li>
+                                <li>then it will ask for password.enter and then it will show your release SHA</li>
+                                <a href="images/phoneauth7.webp" data-fslightbox="gallery">
+                                    <img src="images/phoneauth7.webp" alt="eBroker"
+                                        class="figure-img img-fluid shadow rounded">
+                                </a>
+                                <li>for ios you need to set following.</li>
+                                <p class="teritory-color">
+                                    Add custom URL schemes to your Xcode project:
+                                </p>
+                                <ul>
+                                    <li>Open your project configuration: double-click the project name in the left tree
+                                        view. Select your app from the TARGETS section, then select the Info tab, and
+                                        expand the URL Types section.</li>
+                                    <li>Click the + button, and add a URL scheme for your reversed client ID. To find
+                                        this value, open the
+                                        <span class="teritory-color">GoogleService-Info.plist</span> configuration file,
+                                        and look for the
+                                        <code>REVERSED_CLIENT_ID</code> key. Copy the value of that key, and paste it
+                                        into the URL Schemes box on the configuration page. Leave the other fields
+                                        blank.
+                                    </li>
+                                    <li>
+                                        When completed, your config should look something similar to the following (but
+                                        with your application-specific values):
+                                    </li>
+                                    <a href="images/phonauth8.webp" data-fslightbox="gallery">
+                                        <img src="images/phonauth8.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                </ul>
+                            </ol>
+                        </section>
+
+                        <section class="docs-section" id="enablenotification">
+                            <h2>How to enable Firebase Notifications</h2>
+                            <div class="container">
+                                <ol>
+                                    <li> Get server key from your
+                                        firebase project and
+                                        set in panel.
+                                    </li><br>
+                                    <li>Go to Project Settings -> Cloud Messaging -> Manage API on Google cloud Console
+                                    </li><br>
+                                    <a href="images/fnotif1.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif1.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+
+
+                                    </a>
+
+
+
+                                    <br />
+                                    <br>
+                                    <li>Now enable the API</li>
+                                    <br />
+
+                                    <a href="images/fnotif2.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif2.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+
+
+
+                                    </a>
+                                    <br /><br>
+                                    <li> Copy Server Key</li>
+
+                                    <br />
+
+
+                                    <a href="images/fnotif3.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif3.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+
+                                    <br>
+                                    <li>now add in admin panel</li>
+                                    <br /> <a href="images/fnotif4.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif4.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+
+
+
+                                    </a>
+
+                                </ol>
+
+                                <br><br>
+
+                                <ol>
+                                    <li>for ios your need to perform below given step</li>
+                                    <li>In Xcode, open the project.</li>
+                                    <li>In the Project Navigator (the left-hand menu), select the project icon that
+                                        represents your app.</li>
+                                    <li>In the top-left corner of the right-hand pane in Xcode, select your app's
+                                        target.</li>
+                                    <li>Navigate to the Capabilities tab.</li>
+                                    <li>Enable Push Notifications.</li>
+                                    <li>Check Remote Notifications and Background Fetch from Enabling Background Modes.
+                                    </li><br>
+                                    <a href="images/fnotif5.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif5.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    </a><br><br>
+
+
+
+                                    <li>APNs (Apple's Push Notification service) currently supports two types of
+                                        connections: token-based (.p8) and certificate-based (.p12).you can follow
+                                        either one of them</li>
+                                    <br>
+                                    <h4>For Token-based (.p8).</h4>
+                                    <li>Log in to the Apple Developer Portal.</li>
+                                    <li>Navigate to Certificates, IDs & Profiles > Identifiers > App IDs and click the
+                                        App ID associated with your app.</li>
+                                    <li>On the screen for your App ID, check Capabilities > Push Notifications.</li><br>
+
+                                    <a href="images/fnotif6.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif6.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    </a><br><br>
+
+                                    <a href="images/fnotif7.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif7.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    </a><br><br>
+
+                                    <li>Select App ID in next page & click continue.</li>
+                                    <li>And then create Development SSL Certificate & Production SSL Certificate by
+                                        adding CSR certificate. follow Apple's <a
+                                            href="https://help.apple.com/developer-account/" style="color:red">Create a
+                                            certificate signing request instructions.</a>
+
+                                    </li>
+                                    <li>Navigate to Certificates, IDs & Profiles > Keys Section and add a Universal key
+                                        for Notifications,which you can use for more than one apps as well.
+
+                                    </li>><br>
+
+                                    <a href="images/fnotif8.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif8.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    </a><br><br>
+
+                                    <li>Just save and Download & keep it safe, as it will be downloaded only once.</li>
+
+                                    <br>
+
+                                    <a href="images/fnotif9.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif9.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    </a><br><br>
+                                    <li>Then go to Firebase and add this .p8 file along with Your Key ID and Team ID.
+                                    </li>
+
+                                    <br>
+
+                                    <a href="images/fnotif10.webp" data-fslightbox="gallery">
+                                        <img src="images/fnotif10.webp" alt="eBroker"
+                                            class="figure-img img-fluid shadow rounded">
+                                    </a>
+                                    </a><br><br>
+
+
+                                    <h4>FOR certificate-based (.p12) :
+                                    </h4>
+                                    <br>
+                                    <li>Log in to the Apple Developer Portal.</li>
+                                    <li>Navigate to Certificates, IDs & Profiles > Identifiers > App IDs and click the
+                                        App ID associated with your app.</li>
+                                    <li>On the screen for your App ID, check Capabilities > Push Notifications.</li>
+                                    <li>Click Save and respond to the Modify App Capabilities dialog box that appears.
+                                    </li>
+                                    <li>To create the certificate, we will use to communicate with Apple when sending
+                                        push notifications:</li>
+                                    <ul>
+                                        <li>In a new browser tab, follow Apple's <a
+                                                href="https://help.apple.com/developer-account/#/devbfa00fef7"
+                                                style="color:red">Create a certificate signing request instructions.</a>
+                                        </li>
+                                        <li>In the Apple Developer Portal, navigate back to your App ID.</li>
+                                        <li>Click Capabilities > Push Notifications > Configure.</li>
+                                        <li>Click one of the following buttons:</li>
+                                        <ul>
+                                            <li>Development SSL Certificate > Create Certificate (for testing push
+                                                notifications while developing an iOS app)</li>
+                                            <li>Production SSL Certificate > Create Certificate (for sending push
+                                                notifications in production)</li>
+                                        </ul>
+                                        <li>Click Choose File and select the certificate signing request you created
+                                            above.</li>
+                                        <li>Click Continue.</li>
+
+                                        <li>Click Download to download the certificate.</li>
+                                        <li>Use this file to export a .p12 file in the next step.</li>
+
+                                    </ul>
+
+
+                                    <li>Navigate in the Apple Developer Portal to Certificates, IDs & Profiles >
+                                        Provisioning Profiles.</li>
+                                    <li>Click the provisioning profile you'd like to edit.</li>
+                                    <li>Edit the provisioning profile as necessary, and click Save.</li>
+                                    <li>Click Download, and double-click the downloaded provisioning profile to install
+                                        it.</li>
+                                    <li>Make sure your Xcode project is configured to use the provisioning profile as
+                                        necessary.Next, export the downloaded certificate (.cer file) as a .p12 file
+                                        that can be uploaded to firebase:</li>
+
+                                    <ul>
+                                        <li>On your Mac, double-click the .cer file to open it in Keychain Access.</li>
+                                        <li>In Keychain Access, in the lower-left corner, select Category >
+                                            Certificates.</li>
+                                        <li>Select the certificate to export.</li>
+                                        <li>Choose File > Export Items.</li>
+                                        <li>Enter a name in the Save As field.</li>
+                                        <li>Accept the default .p12 file format and click Save. Respond to the prompts,
+                                            and enter a password for the file if necessary.</li>
+                                        <li>Keep track of this file, since you'll upload it to firebase in a later step.
+                                        </li>
+
+
+
+                                        <br>
+
+                                        <a href="images/fnotif11.webp" data-fslightbox="gallery">
+                                            <img src="images/fnotif11.webp" alt="eBroker"
+                                                class="figure-img img-fluid shadow rounded">
+                                        </a>
+                                        </a><br><br>
+
+                                        <a href="images/fnotif12.webp" data-fslightbox="gallery">
+                                            <img src="images/fnotif12.webp" alt="eBroker"
+                                                class="figure-img img-fluid shadow rounded">
+                                        </a>
+                                        </a><br><br>
+
+
+
+                                </ol>
+                                </p>
+                            </div>
+                        </section>
+
+
+
+
+
+
+
+
+                        <article class="docs-article" id="section-4">
+                            <header class="docs-header">
+                                <h1 class="docs-heading">App Settings</h1>
+                                <section class="docs-intro">
+                                    <p></p>
+                                </section>
+                            </header>
+                            <section class="doc-section" id="changeappname">
+                                <br>
+                                <h2>How to change App Name?</h2>
+                                <ul>
+                                    <li>
+                                        Go to
+                                        <b>settings.dart</b>
+                                        file from helper folder. (lib->settings.dart)
+                                    </li>
+                                </ul>
+                                <a href="images/appname.png" data-fslightbox="gallery">
+                                    <img class="figure-img img-fluid shadow rounded" src="images/appname.png">
+                                </a>
+                                <br>
+                                <p>Now execute this command line by line in your terminal</p>
+                                <code>flutter pub global activate rename</code>
+                                <br>
+                                <br>
+                                <code>flutter pub global run rename --appname "Your app name"</code>
+                                <BR></BR>
+                                <p>Note:first go to your project's root folder</p>
+                                <br>
+                            </section>
+                            <section class="doc-section" id="changePackageName">
+                                <br>
+                                <br>
+                                <br>
+                                <h2>How to change App Package Name?</h2>
+                                <ul>
+                                    <li>
+                                        Again Go to
+                                        <b>settings.dart</b>
+                                        file from helper folder. (lib->settings.dart)
+                                    </li>
+                                </ul>
+                                <a href="images/packagename.png" data-fslightbox="gallery">
+                                    <img class="figure-img img-fluid shadow rounded" src="images/packagename.png">
+                                </a>
+                                <br>
+                                <br>
+                                <P>
+                                    Execute this command in terminal and write your package name after --bundleId
+                                    <br>
+                                    <br>
+                                    <code>
+                                    flutter pub global run rename --bundleId com.example.app
+                                </code>
+                                </P>
+                            </section>
+                            <section class="doc-section" id="changeAppLogo">
+                                <br>
+                                <br>
+                                <br>
+                                <h2>How to change App Logo?</h2>
+                                <br>
+                                <ol>
+                                    <li>
+                                        For Android, open
+                                        <span style="color:var(--teritory)">
+                                            <i>android > app > src > main > res > mipmap</i>
+                                        </span>
+                                        add here your logo according to device screen size
+                                    </li>
+                                    <br>
+                                    <a href="images/applogochange1.webp" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded"
+                                            src="images/applogochange1.webp">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>
+                                        For iOS, open
+                                        <span style="color:var(--teritory)">
+                                            <i>ios > Runner > Assets.xcassets > AppIcon.appiconset</i>
+                                        </span>
+                                        here you need to put your logo according to diffrent size.
+                                    </li>
+                                </ol>
+                                <a href="images/applogochange_ios.webp" data-fslightbox="gallery">
+                                    <img class="figure-img img-fluid shadow rounded"
+                                        src="images/applogochange_ios.webp">
+                                </a>
+                            </section>
+
+                            <section class="doc-section" id="changeAppVersion">
+                                <br>
+                                <br>
+                                <br>
+                                <h2>How to change App Version?</h2>
+                                <br>
+                                <div class="container"> <br>
+
+                                    <ol>
+
+
+                                        <li>go to pubspec.yaml </li>
+                                        <li>EX.Update version:A.B.C+X in pubspec.yaml.
+                                        <li>For Android:</li>
+                                        A.B.C represents the versionName such as 1.0.0.
+
+                                        X (the number after the +) represents the versionCode such as 1, 2, 3, etc.</li>
+
+                                        <li><b>Do not forget</b> to execute flutter packages get, flutter build or
+                                            flutter
+                                            run after this step
+                                        </li><br><br>
+                                        <a href="images/version_1.webp" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded"
+                                                src="images/version_1.webp">
+                                        </a>
+                                        <br><br>
+
+                                        <li>For iOS</li>
+                                        <li>
+
+                                            A.B.C represents the CFBundleShortVersionString such as 1.0.0.
+
+                                            X (the number after the +) represents the CFBundleVersion such as 1, 2, 3,
+                                            etc.
+                                        </li>
+
+                                        <li><b>Do not forget</b> to execute flutter packages get, flutter build or
+                                            flutter
+                                            run after this step</li>
+
+                                    </ol>
+                                    <div class="section_bdr"></div>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section class="doc-section" id="changefonts">
+                                <br>
+                                <br>
+                                <br>
+                                <h2>How to change App's fonts?</h2>
+                                <br>
+                                <div class="container"> <br>
+
+                                    <ol>
+
+                                        <li>First go to assets/fonts, and replace your fonts files there</li>
+                                        <li>and go to pubspec.yaml </li>
+                                        <li>replace with your file names</li>
+                                        <a href="images/changefont.png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded"
+                                                src="images/changefont.png">
+                                        </a>
+
+                                    </ol>
+                            </section>
+
+                            </header>
+                            <hr>
+
+                            <section class="doc-section" id="changecolor">
+                                <br>
+                                <br>
+                                <h2>How to Change Colour ?</h2>
+                                <ol>
+                                    <li>Go to <code class="teritory-color">lib/Ui/Theme/theme.dart</code></li>
+                                    <li>In this file you will find <i>light mode</i>,<i>dark mode</i>,<i>message
+                                            colors</i></li>
+                                    <a href="images/themecolor.png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/themecolor.png">
+                                    </a>
+                                </ol>
+                            </section>
+                            <br>
+                            <section class="doc-section" id="changesvg">
+                                <br>
+                                <br>
+                                <h2>How to Change App Icons ?</h2>
+                                <ol>
+                                    <li>Go to <code class="teritory-color">assets/svg/</code></li>
+                                    <li>In this folder you can change icon files</li>
+                                    <a href="images/changeassetsvg.png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded"
+                                            src="images/changeassetsvg.png">
+                                    </a>
+
+
+
+
+
+
+                                </ol>
+                            </section>
+                            <section class="doc-section" id="changeLang">
+                                <br>
+                                <br>
+                                <h2>How to change or add language in app ?</h2>
+                                <ol>
+                                    <li>Go to <code class="teritory-color">assets/languages/</code></li>
+                                    <li>In this folder you can see template.json file</li>
+                                    <a href="images/lang1.png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/lang1.png">
+                                    </a>
+
+                                    <br>
+                                    <li>
+
+                                        You can translate this file on any service or can change values mannually, Here
+                                        is the website <a
+                                            href="https://www.ibm.com/demos/live/watson-language-translator/self-service/home"
+                                            target="_blank">(Click Here)</a>
+                                    </li>
+                                    <a href="images/lang2.png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/lang2.png">
+                                    </a>
+
+                                    go to document tab and translate template file there
+
+                                    <li>
+
+                                        Now go to panel and settings>language
+                                        <br>
+                                        <br>
+                                        <a href="images/lang3.png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded" src="images/lang3.png">
+                                        </a>
+
+                                    </li>
+                                    You can change or add languages from here.
+
+
+                                </ol>
+
+
+
+                            </section>
+
+                            <br><br>
+                            <section class="doc-section" id="setuphosturl">
+                                <br>
+                                <div class="container"> <br>
+                                    <h2>Setup Host URL</h2><br><br>
+                                    <p>
+                                    <ol>
+                                        <li>
+                                            Go to <code> lib>settings.dart</code>
+
+                                        </li>
+
+                                        <li>
+                                            set your panel url at hostUrl variable
+                                        </li>
+
+                                        <p>
+
+                                            <b>Note:</b> Your panel url must be valid
+                                        </p>
+                                    </ol>
+                                    </p>
+                                    <a href="images/hosturl.png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/hosturl.png">
+                                    </a>
+                                </div>
+                            </section>
+                            <section class="doc-section" id="setapiloadlimit">
+                                <br>
+                                <div class="container"> <br>
+                                    <h2>Change API data load limit</h2><br>
+                                    <p>
+                                    <ol>
+                                        <li>Go to <code> lib>settings.dart</code></li>
+                                        <li>Here change apiDataLoadLimit variable value to number you want</li>
+                                        <a href="images/loadlimit.png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded" src="images/loadlimit.png">
+                                        </a>
+
+                                    </ol>
+                                    </p>
+                            </section>
+
+                            <section class="doc-section" id="setupmapkey">
+                                <br>
+                                <div class="container"> <br>
+                                    <h2>How to Add Map API key </h2>
+                                    <ol>
+                                        <li>
+                                            Go to Google Cloud Platform. <a style="color: #3C55D1;"
+                                                href="https://cloud.google.com/"> Click here</a>
+                                        </li>
+                                        <li>
+                                            Click on console. <br> <br>
+                                            <a href="images/map1.webp" data-fslightbox="gallery">
+
+                                                <img src="images/map1.webp" alt="eBroker" />
+                                            </a>
+                                            <br><br>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Select your Firebase Project <br> <br>
+                                            <a href="images/map2.webp" data-fslightbox="gallery">
+                                                <img src="images/map2.webp" alt="eBroker" /></a>
+                                            <br><br>
+                                        </li> <br>
+                                        <li>
+
+                                            Search for APIs, which are shown in below image.<br> <br>
+                                            <a href="images/map3.webp" data-fslightbox="gallery">
+                                                <img src="images/map3.webp" alt="eBroker" /></a>
+                                            <br><br>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Click on Enable to, enable that APIs<br> <br>
+                                            <a href="images/map4.webp" data-fslightbox="gallery">
+                                                <img src="images/map4.webp" alt="eBroker" /></a>
+                                            <br><br>
+                                        </li>
+
+                                        <br>
+                                        <li>
+                                            Do above steps for below listed API. (enable all below APIs one by one by
+                                            searching)<br> <br>
+                                            <a href="images/map5.webp" data-fslightbox="gallery">
+                                                <img src="images/map5.webp" alt="eBroker" /></a>
+                                            <br><br>
+                                        </li> <br>
+                                        <li>
+                                            Go to Credential Tab. you will find your Androiod and iOS API keys.<br> <br>
+                                            <a href="images/map6.webp" data-fslightbox="gallery">
+                                                <img src="images/map6.webp" alt="eBroker" /></a>
+                                            <br><br>
+                                        </li> <br>
+                                        <li>
+                                            You have to setup those above API keys for both Platform.
+
+                                            <ol>
+                                                <li><b>Android Setup</b>
+                                                    <ul>
+                                                        <li>
+                                                            Next, open android ‣ app ‣ src ‣ main ‣ AndroidManifest.xml
+                                                            and
+                                                            paste the Google Maps meta data tag into your application
+                                                            tag
+                                                            before
+                                                            the activity tag, placing the API key you copied before to
+                                                            replace
+                                                            {{YOUR_API_KEY_HERE}}.
+                                                            <br>
+                                                        </li>
+                                                        <code>
+<xmp>
+<meta-data android:name="com.google.android.geo.API_KEY" android:value="{{YOUR_API_KEY_HERE}}" />
+  </xmp>
+</code>
+                                                    </ul>
+                                                </li>
+
+
+                                                <b>Note</b>: For the value field, please paste in your API Key from the
+                                                Google
+                                                Maps
+                                                API registration process.<br><br>
+                                                <a href="images/map7.webp" data-fslightbox="gallery">
+                                                    <img src="images/map7.webp" alt="eBroker" /></a>
+                                                <br><br>
+                                                <li> <b>iOS Setup</b>
+                                                    <ul>
+                                                        <li>
+                                                            Next, open the ios ‣ Runner ‣ AppDelegate.swift file and
+                                                            paste
+                                                            the
+                                                            following
+                                                            code at shown in image.
+                                                            <br><br>
+                                                            GMSServices.provideAPIKey("YOUR KEY HERE")
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                        </li>
+                                        <b>Note</b>: Again, for the value field please paste in your API Key from the
+                                        registration process.<br><br>
+                                        <a href="images/map8.webp" data-fslightbox="gallery">
+                                            <img src="images/map8.webp" alt="eBroker" /></a>
+
+                                    </ol>
+                                    <div class="section_bdr"></div>
+                                    </ul>
+                                    </ol>
+
+
+                                </div>
+                            </section>
+
+                            <section class="doc-section" id="setupplace">
+                                <br>
+                                <div class="container"> <br>
+                                    <h2>How to Setup Place API key</h2>
+
+                                    <ol>
+                                        <li>
+                                            Go to lib/settings.dart
+                                        </li>
+                                        <li>
+                                            <a href="images/placeapi.png" data-fslightbox="gallery">
+                                                <img class="figure-img img-fluid shadow rounded"
+                                                    src="images/placeapi.png">
+                                            </a>
+                                        </li>
+
+                                        <li>Replace your place API key</li>
+                                    </ol>
+
+                            </section>
+
+
+
+                            <section class="doc-section" id="paymentapikeys">
+                                <br>
+                                <div class="container"> <br>
+                                    <h2>How to setup Payment API keys</h2>
+
+                                    <ol>
+                                        <li>
+                                            Go to your panels settings section
+                                        </li>
+                                        <a href="images/paymentapikeys.png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded"
+                                                src="images/paymentapikeys.png">
+                                        </a>
+                                        <li>Replace your place API keys</li>
+                                    </ol>
+
+                            </section>
+
+                            <section class="docs-section" id="setuppanel">
+                                <h2 class="section-heading">How to Setup Admin Penel</h2>
+                                <ol>
+                                    <li> Create your domain or subdomain in your shared hosting</li>
+                                    <li>Create an empty database in your shared hosting and remember this
+                                        credentials:
+                                    </li>
+                                    i. database name
+                                    ii. database username
+                                    iii. database password
+                                    <li>Upload the source code you have downloaded from CodeCanyon and unzip it.
+                                    </li>
+                                    <li>Now navigate to the url where your project is located.</li>
+                                    ex. mydomain.com or subdomain.mydomain.com
+                                    <li>The installation screen should appear.</li>
+                                    <li>Click 'Next step' to proceed .</li>
+
+                                    <br>
+                                    <a href="images/install(screen1).png" data-fslightbox="gallery">
+                                        <a href="images/install(screen1).png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded"
+                                                src="images/install(screen1).png" alt="SmartKitPro">
+                                        </a>
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Click 'Next step' to proceed.</li>
+                                    <br>
+
+                                    <br>
+                                    <br>
+                                    <a href="images/install(step2).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step2).png"
+                                            alt="image">
+                                    </a>
+                                    <br>
+
+                                    <li>Click 'Next step' to proceed</li>
+                                    <br>
+                                    <a href="images/install(step3).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step3).png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Enter the purchase code</li>
+                                    <li>Click 'Next step' to proceed</li>
+
+                                    <a href="images/install(step4).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step4).png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Enter the necessary details related to database setup</li>
+                                    <li>Click 'Next step' to proceed.</li>
+                                    <br>
+                                    <a href="images/install(step5).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step5).png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Click 'Next step' to proceed.</li>
+                                    <br>
+                                    <a href="images/install(step6).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step6).png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Click 'Next step' to proceed.</li>
+                                    <br>
+                                    <a href="images/install(step7).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step7).png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Click on link given below Adminstration area.</li>
+                                    <br>
+                                    <a href="images/install(step8).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/install(step8).png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Default Login Credentials are
+                                        :<br>username:admin@gmail.com<br>password:Admin123
+                                    </li>
+                                    <br>
+                                    <a href="images/DefaultLogin.png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded" src="images/DefaultLogin.png"
+                                            alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+
+                                    <li>System Settings
+
+                                        <br>
+                                        <br>
+
+                                        <a href="images/system_settings.png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded"
+                                                src="images/system_settings.png" alt="SmartKitPro">
+                                        </a>
+                                        <br>
+                                        <br>
+                                    </li>
+
+
+                                </ol>
+                            </section>
+
+
+                            <section class="docs-section" id="setupfirebase">
+                                <h2 class="section-heading">Firebase Settings</h2>
+                                <ol>
+
+
+
+                                    <li>Step 1:Open your Firebase Project for app</li>
+                                    <br>
+                                    <li>Step 2:Click + Sign to Add project</li>
+
+                                    <br>
+
+                                    <br>
+                                    <br>
+                                    <a href="images/firebase(step1).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded"
+                                            src="images/firebase(step1).png" alt="image">
+                                    </a>
+                                    <br>
+
+                                    <li>Step 3:Select Web</li>
+
+                                    <br>
+                                    <a href="images/firebase(step2).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded"
+                                            src="images/firebase(step2).png" alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+
+                                    <li>Give name for your web and click to Register App</li>
+
+                                    <a href="images/firebase(step3).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded"
+                                            src="images/firebase(step3).png" alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <li>Copy One by one Configuration values From this Section and add in Admin Panel ->
+                                        Settings -> Firebase Settings</li>
+                                    <li>Click 'Continue to the console'.</li>
+                                    <br>
+                                    <a href="images/firebase(step4).png" data-fslightbox="gallery">
+                                        <img class="figure-img img-fluid shadow rounded"
+                                            src="images/firebase(step4).png" alt="SmartKitPro">
+                                    </a>
+                                    <br>
+                                    <br>
+
+                                    <br>
+                                    <br>
+                                    <li>Firebase Settings
+
+                                        <br>
+                                        <br>
+
+                                        <a href="images/firebase_settings.png" data-fslightbox="gallery">
+                                            <img class="figure-img img-fluid shadow rounded"
+                                                src="images/firebase_settings.png" alt="SmartKitPro">
+                                        </a>
+                                        <br>
+                                        <br>
+                                    </li>
+
+                                </ol>
+                            </section>
+
+
+
+
+
+
+
+                        </article>
+                        <article class="docs-article" id="section-7">+
+                            <header class="docs-header">
+                                <h1 class="docs-heading">Support</h1>
+                                <section class="docs-intro">
+                                    <p></p>
+                                </section>
+                            </header>
+                            <section class="docs-section" id="support">
+                                <h2>Need Support ?</h2>
+                                <p>Its our pleasure to serve our service and support. please contact our support team.
+                                </p>
+                                <p>
+                                    Develoer:Anish Sumra,
+                                    <br>
+                                    Skype:
+                                    <a href="https://join.skype.com/invite/Wy96gZvdk2oW" target="_blank"
+                                        style="color: #3c55d1;"> Anish Sumra</a>
+                                </p>
+                                <p>
+                                    To help our customers, we constantly be in touch with every customer if they need
+                                    any assistance regarding our product. We offer our customers a support from
+                                    <strong> Mon &#9472; Fri 9.00am to 6.00pm IST (GMT +5.30) &#9472; We are a Team
+                                        located in India &#9472; Asia.</strong>
+                                </p>
+                                <p>Typically we reply our customers for all the questions and queries within 24 hours of
+                                    time via comments, support forum or emails.</p>
+                            </section>
+                            <section class="docs-section" id="rating">
+                                <h2>Your Feedback</h2>
+                                <p>
+                                    Dear valuable customer, Thank you very much for choosing our product. It's our
+                                    pleasure to serve top-notch service to you. Please give us your honest feedback that
+                                    will help us to make a more strong and
+                                    reliable product by click here
+                                    <a href="https://codecanyon.net/downloads" style="color: #3c55d1;"
+                                        target="_blank">Rate Us</a>
+                                    . Thank you very much.
+                                </p>
+                            </section>
+                            <section class="docs-section" id="contactus">
+                                <h2>Contact Us</h2>
+                                <p>
+                                    WRTeam has creative and dedicated group of developers who are mastered in Apps
+                                    Developments and Web Application Development with a niche in delivering quality
+                                    solutions to customers across the globe. Contact
+                                    us today to find out how we can help you or for freelance work.
+                                </p>
+                                <p>
+                                    Visit Us :
+                                    <a href="https://wrteam.in/" target="_blank">
+                                        <span style="color: #0e8bcb;">https://wrteam.in</span>
+                                    </a>
+                                </p>
+                                <p>Mail Us : info@wrteam.in</p>
+                                <p>Call Us : +91 9033 646589</p>
+                                <p>
+                                    Skype :
+                                    <a href="https://join.skype.com/invite/Wy96gZvdk2oW" target="_blank"
+                                        style="color: #3c55d1;"> Anish Sumra</a>
+                                </p>
+                                <p>Mail Us : info@wrteam.in</p>
+                                <p>Thank you very much.</p>
+                            </section>
+                        </article>
+            </div>
+        </div>
+    </div>
+    <!--//docs-wrapper-->
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
+    <script src="assets/fslightbox.js"></script>
+    <script src="assets/js/docs.js"></script>
+    <script></script>
+    <style>
+        .teritory-color {
+
+            color: var(--teritory) !important;
+        }
+    </style>
+    <script>
+
+
+    </script>
+</body>
+
+</html>
